@@ -10,6 +10,7 @@ import { UserModel } from 'src/app/Models/user';
 export class HomeComponent implements OnInit {
 
   users: UserModel[];
+  login: string;
 
   constructor( private githubservice: GithubService) { }
 
@@ -21,6 +22,12 @@ export class HomeComponent implements OnInit {
     this.githubservice.getData()
     .subscribe(data => this.users = data);
     
+  }
+
+  Search(){
+    this.users = this.users.filter(res => {
+      return res.login.toLocaleLowerCase().match(this.login.toLocaleLowerCase());
+    })
   }
 
 }

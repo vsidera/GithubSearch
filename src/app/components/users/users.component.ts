@@ -9,6 +9,7 @@ export class UsersComponent implements OnInit {
 
   @Input () users: string[] ;
 
+
   constructor() { }
 
   ngOnInit(): void {

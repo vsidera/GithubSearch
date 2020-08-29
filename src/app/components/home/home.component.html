@@ -1,3 +1,4 @@
 <h1>Github API</h1>
 <button (click)="getUsers()"> Get Users</button>
+<input type="text" [(ngModel)]="login" (input)="Search()"/>
 <app-users [users]="users"></app-users>
