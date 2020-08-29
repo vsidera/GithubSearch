@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from 'src/app/services/github.service';
+import { UserModel } from 'src/app/Models/user';
 
 @Component({
   selector: 'app-home',
@@ -8,18 +9,18 @@ import { GithubService } from 'src/app/services/github.service';
 })
 export class HomeComponent implements OnInit {
 
-  users: string[];
+  users: UserModel[];
 
   constructor( private githubservice: GithubService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    
   }
-  getUsers(){
 
-    this.githubservice.getData().subscribe((data) => {
-      console.log (data) ;
-      // this.users = data;
-    })
+  getUsers(){
+    this.githubservice.getData()
+    .subscribe(data => this.users = data);
+    
   }
 
 }

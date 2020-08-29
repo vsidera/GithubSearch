@@ -12,7 +12,7 @@ export class GithubService {
 
   constructor(private http: HttpClient) { }
 
-  getData():Observable<UserModel>{
+  getData():Observable<UserModel[]>{
 
      
 
