@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
 
     this.githubservice.getData().subscribe((data) => {
       console.log (data) ;
+      this.users = data;
     })
   }
 
