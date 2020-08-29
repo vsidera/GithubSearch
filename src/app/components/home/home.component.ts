@@ -25,9 +25,15 @@ export class HomeComponent implements OnInit {
   }
 
   Search(){
-    this.users = this.users.filter(res => {
-      return res.login.toLocaleLowerCase().match(this.login.toLocaleLowerCase());
-    })
+    if (this.login != ""){
+      this.users = this.users.filter(res => {
+        return res.login.toLocaleLowerCase().match(this.login.toLocaleLowerCase());
+      });
+    }
+    else if (this.login == ""){
+      this.ngOnInit();
+    }
+   
   }
 
 }
