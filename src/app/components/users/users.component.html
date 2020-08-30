@@ -1,8 +1,10 @@
 
 <ul *ngFor = "let user of users">
-   {{user.username}}
-   {{ user.login }}
-   {{user.name}}
-   {{user.id}}
-   {{user.avatar_url}}
+   <li>
+      {{ user.login }}
+      {{user.id}}
+      {{user.avatar_url}}
+   </li>
+   <hr>
+  
 </ul>
