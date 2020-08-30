@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { UsersComponent } from './components/users/users.component';
 import { from } from 'rxjs';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    UsersComponent
+    UsersComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
