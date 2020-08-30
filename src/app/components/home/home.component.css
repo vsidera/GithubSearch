@@ -1,11 +1,18 @@
+
+#Input{
+width: 60%;
+align-content: center;
+}
+
 .form{
     width: 100%;
     padding-top: 20px;
     align-content: center;
     margin: 8px 0;
     box-sizing: border-box;
-    padding-left: 500px;
+    padding-left: 400px;
 }
+
 .card {
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
