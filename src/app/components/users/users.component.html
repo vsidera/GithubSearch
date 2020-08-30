@@ -1,9 +1,12 @@
 
 <ul *ngFor = "let user of users">
    <li>
+    
+      
+      <img width="50" height="50" src="{{user.avatar_url}}" alt="">
+
       {{ user.login }}
-      {{user.id}}
-      {{user.avatar_url}}
+      {{ user.id }}
    </li>
    <hr>
   
