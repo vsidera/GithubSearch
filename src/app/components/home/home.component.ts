@@ -15,12 +15,12 @@ export class HomeComponent implements OnInit {
   constructor( private githubservice: GithubService) { }
 
   ngOnInit() {
-    
+    this.githubservice.getData()
+    .subscribe(data => this.users = data);
   }
 
   getUsers(){
-    this.githubservice.getData()
-    .subscribe(data => this.users = data);
+    
     
   }
 

@@ -8,14 +8,13 @@ import { UserModel } from 'src/app/Models/user';
 })
 export class GithubService {
 
-  private url = "https://api.github.com/users"
+  private url:string = 'https://api.github.com/users'
+  usersLimit = '?_limit=5'
 
   constructor(private http: HttpClient) { }
 
   getData():Observable<UserModel[]>{
 
-     
-
-     return this.http.get<any>(this.url)
+     return this.http.get<UserModel[]>(`${this.url}${this.usersLimit}`);
   }
 }
