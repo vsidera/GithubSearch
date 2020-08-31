@@ -1,18 +1,29 @@
 <div class="Users">
 <ul *ngFor = "let user of users">
-   <li>
-    
-      
-      <img width="50" height="50" src="{{user.avatar_url}}" alt="">
 
-      {{ user.login }}
-   
-      <a href="https://github.com/{{user.login}}/">Github</a>
+   <div class="card">
+      <img src="{{user.avatar_url}}" alt="Avatar" style="width:100%">
+      <div class="container">
+        <h4><b>{{ user.login }}</b></h4> 
+        <p><a href="https://github.com/{{user.login}}/">Visit Github</a></p> 
+        <p><a href="https://github.com/{{user.login}}?tab=repositories/">See Repos</a></p>
+      </div>
+    </div>
+
+   <!-- <li>
+     
+         <img width="100" height="100" src="{{user.avatar_url}}" alt=""><br>
+
+         {{ user.login }} <br>
+
+      <a href="https://github.com/{{user.login}}/">Visit Github</a>
+
       <br>
-      <a href="https://github.com/{{user.login}}?tab=repositories/">Repos</a>
+      <a href="https://github.com/{{user.login}}?tab=repositories/">See Repos</a>
       
+
    </li>
-   <hr>
+   <hr> -->
   
 </ul>
 </div>
